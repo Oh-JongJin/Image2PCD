@@ -1,14 +1,15 @@
 # Image2PCD
 
-Single image to Point Cloud Data converter using Depth Anything V2. This project provides a simple pipeline to generate 3D point clouds from 2D images by estimating depth information.
+Single image to Point Cloud Data converter using Depth Anything V2. 
+This project provides a simple pipeline to generate 3D point clouds from 2D images by estimating depth information.
 
 
 
 ## Features
-- Single image depth estimation using Depth Anything V2
+- Single image depth estimation using Depth-Anything-V2
 - 3D point cloud generation with RGB color information
 - Optional mask support for filtered point cloud generation
-- Outputs both PCD file and depth visualization
+- Outputs both PCD file and depth image
 
 
 
@@ -23,12 +24,14 @@ depth-anything-v2
 
 
 
-## Project Structure
+## Structure
 ```
-├── images/           # Input images directory
-├── result/         # Output directory for PCD and depth visualization
-├── checkpoint/     # Directory for model weights
-├── main.py         # Main script
+├── Depth-Anything-V2/	# Refer to the Installation section
+├── images/             # Input images directory
+├── result/         	# Output directory for PCD and depth visualization
+├── checkpoint/     	# Directory for model weights
+├── run.py         		# Main script
+├── LICENSE
 └── README.md
 ```
 
@@ -45,7 +48,8 @@ cd Image2PCD
 2. Install dependencies:
 ```bash
 pip install torch opencv-python numpy open3d
-# Install Depth Anything V2 following their official repository
+# Install Depth Anything V2
+git clone https://github.com/DepthAnything/Depth-Anything-V2.git
 ```
 
 3. Download the pre-trained weights for Depth Anything V2 (vitl model):
@@ -53,6 +57,8 @@ pip install torch opencv-python numpy open3d
 mkdir checkpoint
 # Download depth_anything_v2_vitl.pth and place it in the checkpoint directory
 ```
+
+[model download link](https://github.com/DepthAnything/Depth-Anything-V2?tab=readme-ov-file#pre-trained-models)
 
 
 
@@ -83,27 +89,15 @@ depth_anything.load_state_dict(torch.load(
 
 
 
-## Configuration
-
-The script supports different model configurations:
-- vits: ViT-Small model
-- vitb: ViT-Base model
-- vitl: ViT-Large model (default)
-- vitg: ViT-Giant model
-
-Model selection can be modified in the script by changing the model_configs parameter.
-
-
-
 ## Output Format
-- Point Cloud: Standard PCD format with RGB colors
-- Depth Map: Grayscale image (8-bit) with normalized depth values
+- Point Cloud: Standard **PCD** format with RGB colors
+- Depth Map: **Grayscale image** (8-bit) with normalized depth values
 
 
 
 ## Directory Setup
 ```bash
-mkdir data result checkpoint
+mkdir images result checkpoint
 ```
 
 
