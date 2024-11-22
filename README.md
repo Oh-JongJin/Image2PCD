@@ -13,6 +13,8 @@ This project provides a simple pipeline to generate 3D point clouds from 2D imag
 
 
 
+
+
 ## Dependencies
 ```bash
 torch
@@ -24,16 +26,15 @@ depth-anything-v2
 
 
 
-## Structure
+
+
+## Directory Setup
+
+```bash
+mkdir images result checkpoint
 ```
-├── Depth-Anything-V2/	# Refer to the Installation section
-├── images/             # Input images directory
-├── result/         	# Output directory for PCD and depth visualization
-├── checkpoint/     	# Directory for model weights
-├── run.py         		# Main script
-├── LICENSE
-└── README.md
-```
+
+
 
 
 
@@ -62,6 +63,24 @@ mkdir checkpoint
 
 
 
+
+
+### Folder Tree
+
+```
+├── Depth-Anything-V2/	# Refer to the Installation section
+├── images/             # Input images directory
+├── result/         	# Output directory for PCD and depth visualization
+├── checkpoint/     	# Directory for model weights
+├── run.py         		# Main script
+├── LICENSE
+└── README.md
+```
+
+
+
+
+
 ## Usage
 
 1. Place your input images in the `images/` directory
@@ -77,16 +96,6 @@ python run.py
 
 
 
-## Example Code
-```python
-# Load the model
-depth_anything = DepthAnythingV2(**model_configs["vitl"])
-depth_anything.load_state_dict(torch.load(
-    "checkpoint/depth_anything_v2_vitl.pth",
-    map_location=DEVICE,
-))
-```
-
 
 
 ## Output Format
@@ -95,16 +104,13 @@ depth_anything.load_state_dict(torch.load(
 
 
 
-## Directory Setup
-```bash
-mkdir images result checkpoint
-```
-
 
 
 ## Acknowledgements
 - [Depth Anything V2](https://github.com/DepthAnything/Depth-Anything-V2) for the depth estimation model
 - Open3D for point cloud processing capabilities
+
+
 
 
 
