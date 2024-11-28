@@ -91,8 +91,8 @@ python run.py
 ```
 
 3. Check the results in the `result/` directory:
-- `{image_name}.pcd`: Point cloud data file
-- `{image_name}.jpg`: Depth visualization image
+- `IMAGE_NAME.pcd`: Point cloud data file
+- `IMAGE_NAME.jpg`: Depth visualization image
 
 
 
@@ -110,10 +110,4 @@ python run.py
 - [Depth Anything V2](https://github.com/DepthAnything/Depth-Anything-V2) for the depth estimation model
 - Open3D for point cloud processing capabilities
 
-
-
-
-
-## Contact
-For questions and feedback, please create an issue or contact-><5jx2oh@gmail.com>
 

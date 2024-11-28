@@ -64,8 +64,8 @@ if __name__ == '__main__':
     depth_anything = depth_anything.to(DEVICE).eval()
 
     image_name = "test"     # input image file name
-    raw = cv2.imread(f"data/{image_name}.jpg")
-    mask = None  # cv2.imread('/path/to/mask.png') # if you do not have a mask, skip this line
+    raw = cv2.imread(f"data/{image_name}.jpg")  # input your image file endswith
+    mask = None     # cv2.imread('/path/to/mask.png') # if you do not have a mask, skip this line
     depth = depth_anything.infer_image(raw)
     raw = cv2.cvtColor(raw, cv2.COLOR_BGR2RGB)
 
