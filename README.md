@@ -99,8 +99,14 @@ python run.py
 
 
 ## Output Format
-- Point Cloud: Standard **PCD** format with RGB colors
+- Point Cloud: Standard **PCD** format with RGB colors ([pptk](https://github.com/heremaps/pptk) view)
+
+  ![Pointcloud](.\assets\Pointcloud.png)
 - Depth Map: **Grayscale image** (8-bit) with normalized depth values
+
+  ![Depth_image](.\assets\Depth_image.jpg)
+
+
 
 
 
