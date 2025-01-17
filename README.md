@@ -49,11 +49,16 @@ cd Image2PCD
 2. Install dependencies:
 ```bash
 pip install torch opencv-python numpy open3d
-# Install Depth Anything V2
+```
+
+If use a new version of Depth Anything V2, proceed to "clone" with the command below
+
+```bash
 git clone https://github.com/DepthAnything/Depth-Anything-V2.git
 ```
 
 3. Download the pre-trained weights for Depth Anything V2 (vitl model):
+
 ```bash
 mkdir checkpoint
 # Download depth_anything_v2_vitl.pth and place it in the checkpoint directory
@@ -115,5 +120,4 @@ python run.py
 ## Acknowledgements
 - [Depth Anything V2](https://github.com/DepthAnything/Depth-Anything-V2) for the depth estimation model
 - Open3D for point cloud processing capabilities
-
 
