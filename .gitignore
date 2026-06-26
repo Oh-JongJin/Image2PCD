@@ -1,2 +1,6 @@
-images
-checkpoint
+result/*
+images/*
+checkpoint/*
+Depth-Anything-V2/*
+
+!Depth-Anything-V2/.gitkeep
